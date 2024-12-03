@@ -5,15 +5,17 @@ const CardLayout = ({
   width = "300px",
   height = "200px",
   bg ,
+  border
   
 }) => {
   return (
     <div
-      className={`rounded-lg shadow-lg p-4  relative`}
+      className={`rounded-lg shadow-lg p-4  relative m-auto`}
       style={{
         width: width,
         height: height,
         backgroundColor: bg,
+        border: border,
         
       }}
     >

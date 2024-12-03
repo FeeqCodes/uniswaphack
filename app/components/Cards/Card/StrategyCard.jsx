@@ -2,31 +2,57 @@ import React from "react";
 import CardLayout from "../CardLayout";
 import Buttons from "../../Shared/Buttons";
 
-const StrategyCard = ({ width, height, bg }) => {
+const StrategyCard = ({
+  width,
+  height,
+  bg,
+  title,
+  icon,
+  description,
+  benefits,
+  buttonText,
+  color,
+}) => {
   return (
     <CardLayout width={width} height={height} bg={bg}>
       <div
-        className="bg-[#1F211C] w-full h-full flex flex-col justify-center items-center bg-clip-padding
-          backdrop-filter
-          backdrop-blur
-          bg-opacity-45
-          backdrop-saturate-100
+        className="bg-[#1F211C] w-full h-full flex flex-col p-8 bg-clip-padding
+          backdrop-filter backdrop-blur bg-opacity-45 backdrop-saturate-100
           backdrop-contrast-10 z-20 relative border-[#656363] border-[0.5px] rounded-md"
       >
-        {/* <div className="w-[20px] h-[20px] bg-red-400 rounded-full"></div>
-        <div>
-          <p>QuickSwap</p>
-          <p>Decentralized Exchange</p>
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-6">
+          <span className="text-4xl">{icon}</span>
+          <h3 className="text-2xl font-bold text-white">{title}</h3>
         </div>
-        <div>
-          <Buttons text="Enter app" />
-        </div> */}
+
+        {/* Description */}
+        <p className="text-gray-400 mb-8">{description}</p>
+
+        {/* Benefits List */}
+        <div className="flex-1">
+          <h4 className="text-white text-lg mb-4">Features:</h4>
+          <ul className="space-y-3">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-center text-gray-300">
+                <span className="w-2 h-2 rounded-full bg-[#644881] mr-3"></span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Action Button */}
+        <div className="mt-auto">
+          <Buttons text={buttonText} />
+        </div>
       </div>
 
-      {/* Absolute Gradient */}
-      <div className="absolute bottom-0 right-0 w-[100px] h-[100px] rounded-full bg-red-700 z-5  bg-gradient-to-r from-[#644881] to-[#291240] blur-lg backdrop-blur-lg">
-        {" "}
-      </div>
+      {/* Gradient Background */}
+      <div
+        className={`absolute bottom-0 right-0 w-[150px] h-[150px] rounded-full z-5 
+        bg-gradient-to-r ${color} to-[#291240] blur-lg backdrop-blur-lg opacity-40`}
+      ></div>
     </CardLayout>
   );
 };
