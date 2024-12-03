@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -24,12 +25,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex gap-6">
-              <button className="px-8 py-4 bg-gradient-to-r from-[#644881] to-[#291240] rounded-xl text-white font-semibold hover:opacity-90 transition-all">
-                Launch Token
-              </button>
-              <button className="px-8 py-4 border border-[#644881] rounded-xl text-white font-semibold hover:bg-[#644881]/10 transition-all">
-                Explore Pools
-              </button>
+              <Link href="/create-ilo">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#644881] to-[#291240] rounded-xl text-white font-semibold hover:opacity-90 transition-all">
+                  Launch Token
+                </button>
+              </Link>
+              <Link href="/explore-pools">
+                <button className="px-8 py-4 border border-[#644881] rounded-xl text-white font-semibold hover:bg-[#644881]/10 transition-all">
+                  Explore Pools
+                </button>
+              </Link>
             </div>
 
             {/* Stats */}
