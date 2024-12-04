@@ -35,7 +35,10 @@ const SupportedCard = ({ width, height, bg, data }) => {
         </div>
 
         {/* Action Button */}
+        <div className="w-full flex  justify-center">
+
         <Buttons text="Launch on Platform" />
+        </div>
       </div>
 
       {/* Gradient Background */}

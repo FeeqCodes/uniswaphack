@@ -29,8 +29,18 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#644881] to-[#291240]" />
-            <span className="text-xl font-bold text-white">AquaVault</span>
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 text-[#644881]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm1 14h-2v-1h2v1zm0-3.7l-.5.3V13h-1v-.4l-.5-.3C9.75 11.5 9 10.33 9 9c0-1.66 1.34-3 3-3s3 1.34 3 3c0 1.33-.75 2.5-2 3.3z" />
+                </svg>
+              </div>
+              <span className="text-xl font-bold text-white">HourVault</span>
+            </div>
           </Link>
 
           {/* Navigation */}

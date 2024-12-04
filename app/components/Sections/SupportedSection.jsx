@@ -4,12 +4,16 @@ import SubTitle from "../Shared/SubTitle";
 import SupportedCard from "../Cards/Card/SupportedCard";
 import MarginBottom from "../Shared/MarginBottom";
 import Grid from "../Shared/Grid";
+import MarginTop from "../Shared/MarginTop";
+
+
+
 
 const SupportedSection = () => {
   const supportedAmms = [
     {
       name: "Uniswap V4",
-      icon: "/assets/uniswap.svg",
+      icon: "/assets/uniswap-uni-logo.svg",
       type: "Decentralized Exchange",
       stats: {
         tvl: "$5.2B",
@@ -18,21 +22,22 @@ const SupportedSection = () => {
       },
       gradient: "from-[#FF007A] to-[#291240]",
     },
-    {
-      name: "QuickSwap",
-      icon: "/assets/quickswap.svg",
-      type: "Automated Market Maker",
-      stats: {
-        tvl: "$1.8B",
-        volume: "450K",
-        pairs: "1.2K",
-      },
-      gradient: "from-[#2172E5] to-[#291240]",
-    },
+    // {
+    //   name: "QuickSwap",
+    //   icon: "/assets/quickswap.svg",
+    //   type: "Automated Market Maker",
+    //   stats: {
+    //     tvl: "$1.8B",
+    //     volume: "450K",
+    //     pairs: "1.2K",
+    //   },
+    //   gradient: "from-[#2172E5] to-[#291240]",
+    // },
   ];
 
   return (
-    <div className="w-full m-auto mt-[60vh]">
+    <div className="w-full m-auto">
+      <MarginTop  gap="10rem"/>
       <div className="text-center max-w-2xl mx-auto">
         <Title text="Supported AMMs" />
         <SubTitle text="Launch your token on leading decentralized exchanges with built-in liquidity protection" />

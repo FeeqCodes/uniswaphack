@@ -4,6 +4,7 @@ import SupportedSection from "../components/Sections/SupportedSection";
 import Title from "../components/Shared/Title";
 import StrategiesSection from "../components/Sections/StrategiesSection";
 import ProtocolFeatures from "../components/Sections/ProtocolFeatures";
+import GettingStartedSection from "../components/Sections/GettingStartedSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
         <SupportedSection/>
         <ProtocolFeatures />
         <StrategiesSection />
+
+        <GettingStartedSection />
       </div>
     </>
   );

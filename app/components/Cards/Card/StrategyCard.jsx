@@ -23,18 +23,18 @@ const StrategyCard = ({
         {/* Header */}
         <div className="flex items-center gap-4 mb-6">
           <span className="text-4xl">{icon}</span>
-          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          <h3 className="text-xl font-bold text-white">{title}</h3>
         </div>
 
         {/* Description */}
-        <p className="text-gray-400 mb-8">{description}</p>
+        <p className="text-gray-400 mb-8 text-center">{description}</p>
 
         {/* Benefits List */}
         <div className="flex-1">
           <h4 className="text-white text-lg mb-4">Features:</h4>
           <ul className="space-y-3">
             {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-center text-gray-300">
+              <li key={index} className="flex items-center items-center text-gray-300">
                 <span className="w-2 h-2 rounded-full bg-[#644881] mr-3"></span>
                 {benefit}
               </li>
@@ -44,7 +44,7 @@ const StrategyCard = ({
 
         {/* Action Button */}
         <div className="mt-auto">
-          <Buttons text={buttonText} />
+          <Buttons text={buttonText} color="white" />
         </div>
       </div>
 
